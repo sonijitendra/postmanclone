@@ -21,6 +21,8 @@ class TabUpdate(BaseModel):
     unsaved_state: Optional[dict] = None
     is_active: Optional[bool] = None
     sort_order: Optional[int] = None
+    request_id: Optional[str] = None
+    tab_type: Optional[str] = None
 
 
 class TabResponse(BaseModel):
