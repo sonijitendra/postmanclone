@@ -119,7 +119,7 @@ export default function CollectionsPanel() {
   // Filter collections and requests
   const filteredCollections = collections.map((col) => {
     const matchedRequests = col.requests.filter(
-      (r) => 
+      (r: any) => 
         r.name.toLowerCase().includes(filterText.toLowerCase()) ||
         r.url.toLowerCase().includes(filterText.toLowerCase()) ||
         r.method.toLowerCase().includes(filterText.toLowerCase())
