@@ -23,7 +23,7 @@ export default function SaveRequestModal() {
       if (activeTab) {
         setRequestName(activeTab.title === 'Untitled Request' ? '' : activeTab.title);
         setSelectedCollectionId(activeTab.request_id ? 
-          (collections.find((c) => c.requests.some((r) => r.id === activeTab.request_id))?.id || '') : 
+          (collections.find((c) => c.requests.some((r: any) => r.id === activeTab.request_id))?.id || '') : 
           (collections.length > 0 ? collections[0].id : '')
         );
       }
