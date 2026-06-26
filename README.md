@@ -6,6 +6,11 @@ Designed with a **FastAPI backend proxy architecture** to bypass browser CORS li
 
 ---
 
+## Deployed Links:
+
+-**Backend**: https://postmanclone-4jnr.onrender.com
+-**Frontend**: https://postmanclone-one.vercel.app/
+
 ## 🚀 Key Features
 
 ### Core Functionality
