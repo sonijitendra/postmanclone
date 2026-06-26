@@ -28,7 +28,8 @@ export default function NewCollectionModal() {
       setDescription('');
       setIsEditing(false);
     }
-  }, [activeModal, selectedCollectionId, collections]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeModal, selectedCollectionId]);
 
   if (activeModal !== 'new-collection') return null;
 

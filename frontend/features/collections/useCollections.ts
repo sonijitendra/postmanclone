@@ -1,6 +1,8 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { apiService } from '../../services/api';
 
+const EMPTY_ARRAY: any[] = [];
+
 export const useCollections = () => {
   const queryClient = useQueryClient();
 
@@ -55,7 +57,7 @@ export const useCollections = () => {
   });
 
   return {
-    collections: collectionsQuery.data || [],
+    collections: collectionsQuery.data || EMPTY_ARRAY,
     isLoading: collectionsQuery.isLoading,
     error: collectionsQuery.error,
     refetch: collectionsQuery.refetch,

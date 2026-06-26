@@ -30,7 +30,8 @@ export default function SaveRequestModal() {
       setIsCreatingCollection(false);
       setNewCollectionName('');
     }
-  }, [activeModal, activeTabId, tabs, collections]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeModal, activeTabId]);
 
   if (activeModal !== 'save-request') return null;
 

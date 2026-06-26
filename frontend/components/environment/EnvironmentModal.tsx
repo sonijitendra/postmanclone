@@ -52,7 +52,8 @@ export default function EnvironmentModal() {
     } else {
       setVariables([]);
     }
-  }, [selectedEnvId, environments]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedEnvId]);
 
   if (activeModal !== 'variables') return null;
 
