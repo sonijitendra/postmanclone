@@ -55,7 +55,7 @@ export default function NewCollectionModal() {
   };
 
   return (
-    \u003cdiv className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-in fade-in-30" onClick={handleClose}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-in fade-in-30" onClick={handleClose}>
       <form 
         onSubmit={handleSubmit}
         onClick={(e) => e.stopPropagation()}
