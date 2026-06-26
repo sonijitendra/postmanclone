@@ -118,11 +118,14 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Fix Tailwind v4 Preflight stripping form element interactivity */
+/* Ensure form elements always allow text input and selection,
+   even when a parent has user-select: none */
 input, textarea, select {
   color: inherit;
   caret-color: currentColor;
   background-color: transparent;
+  user-select: text;
+  -webkit-user-select: text;
 }
 
 input:focus, textarea:focus, select:focus {

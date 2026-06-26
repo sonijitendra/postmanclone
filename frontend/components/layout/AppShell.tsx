@@ -59,7 +59,7 @@ export default function AppShell() {
   });
 
   return (
-    <div className="flex h-screen w-screen flex-col overflow-hidden bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased select-none">
+    <div className="flex h-screen w-screen flex-col overflow-hidden bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased">
       
       {/* Top Header Navigation */}
       <TopBar />

@@ -115,7 +115,7 @@ export default function EnvironmentModal() {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setActiveModal(null)}>
-      <div onClick={(e) => e.stopPropagation()} className="relative z-[60] flex h-[550px] w-[800px] flex-col rounded-lg border border-[var(--border-color)] bg-[var(--bg-modal)] text-[var(--text-primary)] shadow-lg overflow-hidden animate-in fade-in-50 zoom-in-95 duration-150">
+      <div className="flex h-[550px] w-[800px] flex-col rounded-lg border border-[var(--border-color)] bg-[var(--bg-modal)] text-[var(--text-primary)] shadow-lg overflow-hidden animate-in fade-in-50 zoom-in-95 duration-150">
         
         {/* Header */}
         <div className="flex items-center justify-between border-b border-[var(--border-color)] px-4 py-3">
@@ -156,7 +156,6 @@ export default function EnvironmentModal() {
                   value={newEnvName}
                   onChange={(e) => setNewEnvName(e.target.value)}
                   className="w-full rounded border border-[var(--border-color)] bg-[var(--bg-primary)] px-2 py-1 text-xs outline-none focus:border-[var(--pm-orange)]"
-                  style={{ color: 'var(--text-primary)', caretColor: 'var(--text-primary)' }}
                 />
                 <div className="flex justify-end gap-1 mt-1.5">
                   <button 
