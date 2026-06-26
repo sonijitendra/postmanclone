@@ -118,6 +118,17 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Fix Tailwind v4 Preflight stripping form element interactivity */
+input, textarea, select {
+  color: inherit;
+  caret-color: currentColor;
+  background-color: transparent;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
 /* ============================================
    Scrollbar Styling
    ============================================ */

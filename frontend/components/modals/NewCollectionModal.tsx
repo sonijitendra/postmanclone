@@ -55,10 +55,11 @@ export default function NewCollectionModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-in fade-in-30">
+    \u003cdiv className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-in fade-in-30" onClick={handleClose}>
       <form 
         onSubmit={handleSubmit}
-        className="flex w-[400px] flex-col rounded-lg border border-[var(--border-color)] bg-[var(--bg-modal)] text-[var(--text-primary)] shadow-lg overflow-hidden animate-in fade-in-50 zoom-in-95 duration-150"
+        onClick={(e) => e.stopPropagation()}
+        className="relative z-[60] flex w-[400px] flex-col rounded-lg border border-[var(--border-color)] bg-[var(--bg-modal)] text-[var(--text-primary)] shadow-lg overflow-hidden animate-in fade-in-50 zoom-in-95 duration-150"
       >
         {/* Header */}
         <div className="flex items-center justify-between border-b border-[var(--border-color)] px-4 py-3">
@@ -86,7 +87,8 @@ export default function NewCollectionModal() {
               autoFocus
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="rounded border border-[var(--border-color)] bg-[var(--bg-primary)] px-3 py-2 text-xs text-[var(--text-primary)] outline-none focus:border-[var(--pm-orange)]"
+              className="relative z-10 w-full rounded border border-[var(--border-color)] bg-[var(--bg-primary)] px-3 py-2 text-xs outline-none focus:border-[var(--pm-orange)]"
+              style={{ color: 'var(--text-primary)', caretColor: 'var(--text-primary)' }}
             />
           </div>
 
@@ -97,7 +99,8 @@ export default function NewCollectionModal() {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               rows={3}
-              className="rounded border border-[var(--border-color)] bg-[var(--bg-primary)] px-3 py-2 text-xs text-[var(--text-primary)] outline-none focus:border-[var(--pm-orange)] resize-none"
+              className="relative z-10 w-full rounded border border-[var(--border-color)] bg-[var(--bg-primary)] px-3 py-2 text-xs outline-none focus:border-[var(--pm-orange)] resize-none"
+              style={{ color: 'var(--text-primary)', caretColor: 'var(--text-primary)' }}
             />
           </div>
         </div>

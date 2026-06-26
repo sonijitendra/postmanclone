@@ -66,10 +66,11 @@ export default function SaveRequestModal() {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-in fade-in-30">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-in fade-in-30" onClick={() => setActiveModal(null)}>
       <form 
         onSubmit={handleSave}
-        className="flex w-[420px] flex-col rounded-lg border border-[var(--border-color)] bg-[var(--bg-modal)] text-[var(--text-primary)] shadow-lg overflow-hidden animate-in fade-in-50 zoom-in-95 duration-150"
+        onClick={(e) => e.stopPropagation()}
+        className="relative z-[60] flex w-[420px] flex-col rounded-lg border border-[var(--border-color)] bg-[var(--bg-modal)] text-[var(--text-primary)] shadow-lg overflow-hidden animate-in fade-in-50 zoom-in-95 duration-150"
       >
         {/* Header */}
         <div className="flex items-center justify-between border-b border-[var(--border-color)] px-4 py-3">
@@ -99,7 +100,8 @@ export default function SaveRequestModal() {
               autoFocus
               value={requestName}
               onChange={(e) => setRequestName(e.target.value)}
-              className="rounded border border-[var(--border-color)] bg-[var(--bg-primary)] px-3 py-2 text-xs text-[var(--text-primary)] outline-none focus:border-[var(--pm-orange)]"
+              className="relative z-10 w-full rounded border border-[var(--border-color)] bg-[var(--bg-primary)] px-3 py-2 text-xs outline-none focus:border-[var(--pm-orange)]"
+              style={{ color: 'var(--text-primary)', caretColor: 'var(--text-primary)' }}
             />
           </div>
 
@@ -124,7 +126,8 @@ export default function SaveRequestModal() {
                   placeholder="New collection name..."
                   value={newCollectionName}
                   onChange={(e) => setNewCollectionName(e.target.value)}
-                  className="flex-1 rounded border border-[var(--border-color)] bg-[var(--bg-primary)] px-3 py-1.5 text-xs text-[var(--text-primary)] outline-none focus:border-[var(--pm-orange)]"
+                  className="relative z-10 flex-1 rounded border border-[var(--border-color)] bg-[var(--bg-primary)] px-3 py-1.5 text-xs outline-none focus:border-[var(--pm-orange)]"
+                  style={{ color: 'var(--text-primary)', caretColor: 'var(--text-primary)' }}
                 />
                 <button
                   type="button"
@@ -139,7 +142,8 @@ export default function SaveRequestModal() {
                 required
                 value={selectedCollectionId}
                 onChange={(e) => setSelectedCollectionId(e.target.value)}
-                className="rounded border border-[var(--border-color)] bg-[var(--bg-primary)] px-3 py-2 text-xs text-[var(--text-primary)] outline-none focus:border-[var(--pm-orange)]"
+                className="relative z-10 w-full rounded border border-[var(--border-color)] bg-[var(--bg-primary)] px-3 py-2 text-xs outline-none focus:border-[var(--pm-orange)]"
+                style={{ color: 'var(--text-primary)', caretColor: 'var(--text-primary)' }}
               >
                 <option value="" disabled>-- Choose a Collection --</option>
                 {collections.map((c) => (
