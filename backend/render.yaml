@@ -9,7 +9,7 @@ services:
     name: postman-clone-api
     runtime: python
     region: oregon
-    buildCommand: "pip install -r requirements.txt && alembic upgrade head && python seed.py"
+    buildCommand: "pip install --prefer-binary -r requirements.txt && alembic upgrade head && python seed.py"
     startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
     envVars:
       - key: DATABASE_URL
@@ -22,6 +22,4 @@ services:
         value: production
       - key: DEFAULT_TIMEOUT
         value: "30"
-      - key: PYTHON_VERSION
-        value: "3.11.0"
     healthCheckPath: /api/v1/health
